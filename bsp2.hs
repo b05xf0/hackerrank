@@ -1,4 +1,5 @@
 module Main where
+
 import Data.List ( elemIndex )
 
 getList :: Int -> IO [String]
