@@ -19,9 +19,9 @@ nextMove n r c grid = case findPrincess of
 
 main :: IO ()
 main = do
-  n  <- getLine
-  xy <- getLine
+  n         <- getLine
+  xy        <- getLine
   let i     = read n
-      x:y:_ = read <$> words xy :: [Int]
-  grid <- getList i
+      x:y:_ = read <$> words xy
+  grid      <- getList i
   putStrLn . nextMove i x y $ grid
