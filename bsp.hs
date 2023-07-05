@@ -20,4 +20,4 @@ main = do
   n     <- getLine
   let i = read n
   grid  <- getList i
-  putStrLn.displayPathtoPrincess i $ grid
+  putStrLn . displayPathtoPrincess i $ grid
