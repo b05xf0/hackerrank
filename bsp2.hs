@@ -10,7 +10,7 @@ nextMove n r c grid = case findPrincess of
   (Just pr, Just pc) -> calcMove pr pc
   _                  -> "INVALID INPUT"
   where
-    findPrincess = (div <$> idx <*> Just n, mod <$> idx <*> Just n)
+    findPrincess = (div <$> idx <*> pure n, mod <$> idx <*> pure n)
     idx = elemIndex 'p' . concat $ grid
     calcMove pr pc
       | pr > r = "DOWN"
